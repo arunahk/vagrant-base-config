@@ -31,6 +31,9 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 echo "Installing MySQL"
 apt-get install mysql-server -y > /dev/null
 
+echo "Installing nginx"
+apt-get install nginx-light
+
 # Nginx Configuration
 echo "Configuring Nginx"
 cp /var/www/provision/config/nginx_vhost /etc/nginx/sites-available/nginx_vhost > /dev/null
